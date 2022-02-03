@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div  style="padding:100px 10px 400px 10px;">
+		<center>
+			<table>
+				<tr>
+					<td style="padding:10px  200px;"><h3>Notification From Admin</h3></td>
+				</tr>
+				{% for i in notification %}
+				<tr>
+					<td><h3><marquee>{{ i.Notification }}</marquee></h3></td>
+				</tr>
+				{% endfor %}
+				</table></center>
+		</div>	
+	{% endblock %}
+	

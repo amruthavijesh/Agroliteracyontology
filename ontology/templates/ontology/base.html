@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AgroLiteracyOntology</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="{% static 'default.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+  <div id="logo">
+    <h1><a href="#">AgroLiteracyOntology</a></h1>
+  </div>
+</div>
+<div id="wrapper">
+  <div id="sidebar">
+    <div id="menu">
+      <h2>Navigation Menu</h2>
+      <ul>
+        <li><a href="{% url 'ontology:index' %}" accesskey="1">Homepage</a></li>
+        <li><a href="{% url 'ontology:farmer_page' %}" accesskey="3">Farmer</a></li>
+        <li><a href="{% url 'ontology:dealer_page' %}" accesskey="3">Dealer</a></li>
+        <li><a href="{% url 'ontology:admin_page' %}" accesskey="3">Admin</a></li>
+      </ul>
+    </div>
+    <div id="testimonial">
+  <h2>Contactus</h2>
+  
+    <p>Email:<a href="#">agroliteracyontology@gmail.com</a> </p>
+    <p>Contact No: +000000000</p>
+    
+</div>
+</div>
+</div>
+ {% block content %}
+ {% endblock %}
+<div id="footer">
+  <hr />
+  <p id="links"><a href="#">Home</a> | <a href="#">Terms of Use</a> | <a href="#">Django Projects</a></p>
+  <p id="legal">Copyright &copy; 2022 AgroLiteracyOntology. Designed by <a href="#">amrutha</a>.</p>
+</div>
+</body>
+</html>

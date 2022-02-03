@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 300px;margin-bottom: 240px;text-align: left;"> 
+		<form action="{% url 'ontology:knowledge_center_view_all_products'  %}" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<center>
+		<table>
+			<thead>
+				<tr>
+					<th>Category</th>
+					<th>Name</th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th>Rent_Amount</th>
+					<th>Use</th>
+					<th>Photo</th>	
+				</tr>
+			</thead>
+			<tbody>
+			{% for i in product %}
+				<tr>
+					<td>{{ i.Category.Name }}</td>
+					<td>{{ i.Name }}</td>
+					<td>{{ i.Quantity }}</td>
+					<td>{{ i.Price }}</td>
+					<td>{{ i.Rent_Amount }}</td>
+					<td>{{ i.Use }}</td>
+					<td><img src="{{ i.Photo.url }}" style="width:50px;height:50px"></td>
+					
+					
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table></center>
+		</form>	</div>	
+	{% endblock %}

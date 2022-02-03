@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 300px;margin-bottom: 340px;text-align: left;"> 
+		{% if product %}
+		<form method="post">
+    		{% csrf_token %}
+    			<table>
+        				<tr>
+            					<td><img src="{{ product.Photo.url }}"></td>
+        				</tr>
+        				<tr>
+            					<td>{{ product.Name }}</td>
+				</tr>
+        				<tr>
+					<td>No_of_Days :{{ num_of_days }}</td>
+				</tr>
+        				<tr>
+					<td>Rent_Amount :{{ product.Rent_Amount }}</td>
+				</tr>
+        				<tr>
+					<td>Total Amount : {{ total }}</td>
+				</tr>
+        				<tr>
+					<td>Return Date : {{ return_date }}</td>
+				</tr>
+        				<tr>
+            					<td></td>
+        				</tr>
+        				<tr>
+            					<td><a href="{%url 'ontology:farmer_home' farmer.id %}">Click To Back Home </a></td>
+        				</tr>
+    </table>
+</form>	{% endif %}
+	{% endblock %}</div>

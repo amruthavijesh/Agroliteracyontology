@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 300px;margin-bottom: 340px;text-align: left;"> 
+		<div>
+		<table>
+			{% for p in product %}
+			<tr>
+				<td><img src="{{ p.Photo.url }}" style="width:200px;height:200px"></td>
+				<td></td>
+			</tr>
+			<tr align="center">
+				<td></td>
+				<td>{{ p.Name }}</td>
+			</tr>
+			<tr align="center">
+				<td></td>
+				<td>Quantity: {{ p.Quantity }}</td>
+			</tr>
+			<tr align="center">
+				<td></td>
+				<td>Price: {{ p.Price }}</td>
+			</tr>
+			<tr align="center">
+				<td></td>
+				<td><a href="{% url 'ontology:show_single_product' p.id %}"><input type="button" value="Order"></a></td>
+			</tr>
+			<tr>
+				<td></td>
+          				<td align="center"><h3>If you have any doubt? Please Click below to Submit your Doubt!</h3></td>
+      			</tr>
+			<tr align="center">
+				<td></td>
+				<td><a href="{% url 'ontology:add_question' p.id %}"><input type="button" value="Send Query"></a></td>
+			</tr>
+			{% endfor %}	
+		</table>
+		</div>		
+	{% endblock %}	</div>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+<div style="margin-top: 50px; margin-left: 500px;margin-bottom: 100px;">
+		<ul>
+			<li><a href="#">Home</a></li><br><br>
+			<li><a href="{% url 'ontology:view_farmer_profile' fmr.id %}">View Profile</a></li><br><br>
+			<li><a href="{% url 'ontology:farmer_view_services' %}">View Services</a></li><br><br>
+			<li><a href="{% url 'ontology:view_product_cat' %}">View Products</a></li><br><br>
+			<li><a href="{% url 'ontology:farmer_view_notification' %}">View Notification</a></li><br><br>
+			<li><a href="{% url 'ontology:farmer_view_payment_detail' %}">View Payment Details</a></li><br><br>
+			<li><a href="{% url 'ontology:rent_equipment' %}">Rent Equipments</a></li><br><br>
+			<li><a href="{% url 'ontology:send_complaint' fmr.id %}">Submit Complaints</a></li><br><br>
+			<li><a href="{% url 'ontology:farmer_change_password' fmr.id %}">Change Password</a></li><br><br>
+			<li><a href="{% url 'ontology:logout' %}">Logout</a></li>
+		</ul>	
+	</div>
+	{% endblock %}

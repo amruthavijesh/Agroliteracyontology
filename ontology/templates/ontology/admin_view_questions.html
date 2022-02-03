@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 300px;margin-bottom: 500px;text-align: left;"> 
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Farmer Id</th>
+					<th>Farmer Name</th>
+					<th>Product Name</th>
+					<th>Product  Photo</th>
+					<th>Question Date</th>
+					<th>Question</th>
+					<th>Reply</th>
+					<th>Reply Date</th>
+					<th>View</th>	
+				</tr>
+			</thead>
+			<tbody>
+			{% for i in question %}
+				<tr>
+					<td>{{ i.id }}</td>
+					<td>{{ i.Farmer.id }}</td>
+					<td>{{ i.Farmer.Firstname }}</td>
+					<td>{{ i.Product.Name }}</td>
+					<td><img src="{{ i.Product.Photo.url }}" style="width:50px;height:50px"></td>
+					<td>{{ i.Quest_Date }}</td>
+					<td>{{ i.Quest }}</td>
+					<td>{{ i.Reply }}</td>
+					<td>{{ i.Reply_Dtae }}</td>
+					<td><a href="{% url 'ontology:send_question_reply' i.id %}"><input type="submit" value="view"></a></td>
+				</tr>
+			{% endfor %}
+			</tbody>	
+		</table>
+		</div>		
+	{% endblock %}

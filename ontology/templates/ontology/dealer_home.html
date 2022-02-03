@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div  style="margin-top: 50px; margin-left: 500px;margin-bottom: 100px;"> 
+		
+		<ul>
+			<li><a href="#">Home</a></li><br><br>
+			<li><a href="{% url 'ontology:view_dealer_profile' dlr.id %}">View Profile</a></li><br><br>
+			<li><a href="{% url 'ontology:select_category' dlr.id %}">Add Product</a></li><br><br>
+			<li><a href="{% url 'ontology:view_all_products' %}">View All Products</a></li><br><br>
+			<li><a href="{% url 'ontology:dealer_view_notification' %}">View Notifications</a></li><br><br>
+			<li><a href="{% url 'ontology:dealer_view_payment_detail' %}">View All Orders and Payment Detail</a></li><br><br>
+			<li><a href="{% url 'ontology:add_dealer_notification' dlr.id %}">Add Notification</a></li><br><br>
+			<li><a href="{% url 'ontology:dealer_change_password' dlr.id %}">Change Password</a></li><br><br>
+			<li><a href="{% url 'ontology:logout' %}">Logout</a></li>
+		</ul>
+	
+	</div>
+
+	
+	{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 300px;margin-bottom: 500px;text-align: left;"> 
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Farmer Id</th>
+					<th>Farmer Name</th>
+					<th>Complaint Date</th>
+					<th>Complaint</th>
+					<th>Reply</th>
+					<th>Reply Date</th>
+					<th>View</th>	
+				</tr>
+			</thead>
+			<tbody>
+			{% for i in complaint %}
+				<tr>
+					<td>{{ i.id }}</td>
+					<td>{{ i.Farmer.id }}</td>
+					<td>{{ i.Farmer.Firstname }}</td>
+					<td>{{ i.Query_Date }}</td>
+					<td>{{ i.Query }}</td>
+					<td>{{ i.Reply }}</td>
+					<td>{{ i.Reply_Date }}</td>
+					<td><a href="{% url 'ontology:send_complaint_reply' i.id %}"><input type="submit" value="view"></a></td>
+				</tr>
+			{% endfor %}	
+			</tbody>
+		</table>
+		</div>		
+	{% endblock %}

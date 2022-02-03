@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 500px;margin-bottom: 500px;text-align: left;"> 
+		
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Services</th>	
+				</tr>
+			</thead>
+			<tbody>
+			{% for i in service%}
+				<tr>
+					<td>{{ i.id }}</td>
+					<td>{{ i.Service }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>	
+		</table>
+		</div>		
+	{% endblock %}

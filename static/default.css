@@ -1,0 +1,205 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #FFFEF5 url(images/img01.gif);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #767941;
+}
+
+h1, h2, h3 {
+	color: #F08F02;
+}
+
+
+
+h2 {
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+
+h3 {
+	margin-bottom: 1.5em;
+	text-transform: uppercase;
+	font-size: .8em;
+}
+
+p, blockquote, ul, ol {
+	margin-bottom: 1.5em;
+}
+
+
+
+blockquote {
+	margin-left: 2em;
+	padding-left: 1em;
+	border-left: 2px solid #F08F02;
+	font-style: italic;
+}
+
+ul, ol {
+	margin-left: 3em;
+}
+
+
+
+
+
+a:link {
+	color: #F08F02;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+.image-left {
+	float: left;
+	margin-right: 1em;
+}
+
+.image-right {
+	float: right;
+	margin-left: 1em;
+}
+
+
+
+/* Header */
+
+#header {
+	height: 230px;
+	width: 400px;
+	padding: 0 0 0 270px;
+	background: url(images/th.jpg) no-repeat;
+}
+
+/* Logo */
+
+#logo {
+	height: 80px;
+	padding: 102px 0 0 50px;
+	background: url(images/img03.jpg) no-repeat;
+	text-transform: lowercase;
+}
+
+#logo h1 {
+	float: left;
+	letter-spacing: -.1em;
+	font-style: italic;
+	font-size: 3em;
+}
+
+#logo h1 a {
+	color: #767941;
+}
+
+#logo h2 {
+	float: left;
+	letter-spacing: -.05em;
+	font-style: italic;
+	font-size: 1em;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+/* Wrapper */
+
+#wrapper {
+	margin-right: 100px;
+	background: url(images/img05.jpg) repeat-y 330px 0;
+}
+
+/* Sidebar */
+
+#sidebar {
+	float: left;
+	width: 330px;
+}
+
+/* Content */
+
+#content {
+	margin-left: 330px;
+	padding: 30px;
+}
+
+/* Menu */
+
+
+
+#menu h2 {
+	display: none;
+}
+
+#menu ul {
+	margin: 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	height: 45px;
+	padding: 16px 0 0 30px;
+	background: url(images/img04.jpg) repeat-x;
+	text-decoration: none;
+	font-size: 1.4em;
+	font-style: italic;
+	color: #767941;
+}
+
+#menu a:hover {
+	color: #F08F02;
+}
+
+/* Testimonial */
+
+#testimonial {
+	padding: 30px;
+}
+
+#testimonial blockquote {
+	margin-left: 0;
+}
+
+/* Welcome */
+
+
+
+/* Footer */
+
+#footer {
+	padding: 60px 30px;
+	background: url(images/img06.gif);
+	color: #ADB07C
+}
+
+#footer hr {
+	display: none;
+}
+
+#footer p {
+	margin: 0;
+	font-size: .8em;
+}
+
+#footer a {
+	color: #ADB07C
+}
+

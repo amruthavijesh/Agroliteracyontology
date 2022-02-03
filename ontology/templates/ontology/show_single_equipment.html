@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 300px;margin-bottom: 140px;text-align: left;"> 
+		<form action="{% url 'ontology:farmer_rent_equipment' product.id %}" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		
+		<table>
+			{% if product %}
+			<tr>
+				<td><img src="{{ product.Photo.url }}" style="width:250px;height:250px"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>{{ product.Name }}</td>
+			</tr>
+			<tr>
+				<td>Category:  {{ product.Category.Name }}</td>
+			</tr>
+			<tr>
+				<td>Quantity: {{ product.Quantity }}</td>
+			</tr>
+			<tr>
+				<td>Rent_Amount: {{ product.Rent_Amount }}</td>
+			</tr>
+			<tr>
+				<td>Enter No_of_Days: <input type="text" name="No_of_Days"></td>
+			</tr>
+			<tr>
+				<td>Select Return Date: <input type="date" name="Return_Date"></td>
+			</tr>
+			<tr>
+				
+				<td><input type="submit" value="Confirm Rent"></td>
+			</tr>
+			{% endif %}
+		
+		</table>
+		
+		</form>	</div>	
+	{% endblock %}	

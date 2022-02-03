@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 50px; margin-left: 300px;margin-bottom: 260px;text-align: left;">
+    <center>   
+      <i style="font-size: 20px;padding: 100px;"> Farmer can register here</i>       
+        <form action="{% url 'ontology:farmer_reg' %}"  method="POST" >
+
+        {% csrf_token %}                        
+                                
+            <table>
+	<tr>
+	{{ form.as_table }}
+	</tr>
+            </table><br><br>
+          <input type="submit" name="Register" value="Register">            
+         </form>
+        </center>     
+         </div>
+          {% endblock %}

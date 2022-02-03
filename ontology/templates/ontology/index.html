@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+<div id="content">
+<div id="welcome">
+  <p class="image-right"><img src="{% static 'images/img8.jpg' %}" alt="" width="200" height="150" /></p>
+  <h2>Welcome to AgroLiteracyOntology!</h2>
+  <p><strong>AgroLiteracyOntology</strong> is a place where farmers and dealers can interact through an online medium.</p>
+</div>
+<div id="example">
+  <h2>Features</h2>
+  <p>What are the features available.....?</p>
+  <ul>
+    <li><a href="#">Do you have money to buy an agricultural equipment?....if no, don't worry you can rent an equipment..</a></li>
+    <li><a href="#">If you want to sell your products... we are here to help you...</a></li>
+  </ul>
+  <div>
+    <img src="media/plant1.jpg" alt="plant1" height="180px" width="287px">
+    <img src="media/plant2.jpg" alt="plant2" height="180px" width="287px">
+    <img src="media/plant3.jpg" alt="plant3" height="180px" width="287px">
+  </div>
+</div>
+</div>
+<div style="height: 1px; clear: both;"></div>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+<div style="margin-top: 50px; margin-left: 500px;margin-bottom: 100px;">
+		<ul>
+			<li><a href="#">Home</a></li><br><br>
+			<li><a href="{% url 'ontology:manage_farmer' %}">Manage Farmer</a></li><br><br>
+			<li><a href="{% url 'ontology:view_all_farmers' %}">View All Farmers</a></li><br><br>
+			<li><a href="{% url 'ontology:knowledge_center_view_all_products' %}">View All Products</a></li><br><br>
+			<li><a href="{% url 'ontology:admin_view_complaints' %}">View Complaints</a></li><br><br>
+			<li><a href="{% url 'ontology:admin_view_questions' %}">View Questions</a></li><br><br>
+			<li><a href="{% url 'ontology:admin_view_notification' %}">View Notifications</a></li><br><br>
+			<li><a href="{% url 'ontology:add_knowledge_center_service' %}">Add Services</a></li><br><br>
+			<li><a href="{% url 'ontology:add_knowledge_center_notification' %}">Add Notifications</a></li><br><br>
+			<li><a href="{% url 'ontology:logout' %}">Logout</a></li>
+		</ul>
+	</div>	
+	{% endblock %}	

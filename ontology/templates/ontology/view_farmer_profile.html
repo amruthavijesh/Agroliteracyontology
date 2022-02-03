@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 300px;margin-bottom: 300px;text-align: left;"> 
+		<form action="{% url 'ontology:view_farmer_profile' farmer.id %}" method="post">
+		{% csrf_token %}
+		<center>
+		<table>
+			{{ form.as_table }}
+		
+		</table>
+		<br><br>
+		<input type="submit" name="Update" value="Update">
+		</center>
+		</form>	</div>	
+	{% endblock %}

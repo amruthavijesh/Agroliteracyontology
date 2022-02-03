@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 300px;margin-bottom: 500px;text-align: left;"> 
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>DealerId</th>
+					<th>Dealer Name</th>
+					<th>Notification</th>	
+				</tr>
+			</thead>
+			<tbody>
+			{% for i in notification %}
+				<tr>
+					<td>{{ i.id }}</td>
+					<td>{{ i.DealerId.id}}</td>
+					<td>{{ i.DealerId.Firstname }}</td>
+					<td>{{ i.Notification }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>	
+		</table>
+		</div>		
+	{% endblock %}

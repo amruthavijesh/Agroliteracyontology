@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'ontology/base.html' %}
+{% load static %}
+{% block content %}
+	<div style="margin-top: 100px; margin-left: 300px;margin-bottom: 540px;text-align: left;"> 
+		<form action="{% url 'ontology:add_product' dealer.id %}" method="post">
+		{% csrf_token %}
+		<center>
+		<table>
+			<tr>
+				<td>Select Category</td>
+				<td>
+					<select name="Category" required="">
+						<option value="">--select category--</option>
+						{% for c in category %}
+						<option value="{{ c.id }}">{{ c.Name  }}</option>
+						{% endfor %}
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Select"></td>
+			</tr>
+		</table>
+	</center>
+		</form>	
+	</div>	
+	{% endblock %}	
